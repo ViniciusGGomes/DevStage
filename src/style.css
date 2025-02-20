@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue: #6F9DE2;
+    --purple: #9871F3;
+    --gradient: 90deg, #4B7FCD 0%, #8A61EA 100%;
+
+    --danger: #F05D6C;
+
+    --grayscale-gray-100: #DAE4F2; 
+
+    --font-family-heading: "Oxanium";
+    --font-family-body: "Montserrat";
+}
+
+
+body{
+    background: url(./img/Background.png) center;
+    min-height: 100vh;
+    
+    display: grid; /*Maneira que é vista os nossos itens*/
+    place-items: center;
+    padding: 2rem 1rem;
+}
+
+header{
+    font-family: var(--font-family-heading);
+    
+    display: grid;
+    justify-items: center; /*função do display*/
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+h1{
+    text-align: center;
+    font-family: var(--font-family-heading);
+    font-size: 2.5rem;
+    line-height: 100%;
+    color: var(--blue);
+}
+
+h1 div{
+    color: var(--grayscale-gray-100)
+}
+
+main {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 368px;
+}
+
+section{
+    background: #191D24;
+    padding: 1.5rem;
+    border: 1px solid #21252c;
+    border-radius: 1rem;
+}
+
+.section-header{
+    display: flex; /*Coloca um item ao lado do outro*/
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+h2{
+    font-family: var(--font-family-body);
+    font-size: 1.25rem;
+    line-height: 100%;
+    color: #c8d0c8;
+}
+
+.badge{
+    font-size: 0.72rem;
+    line-height: 160%;
+    font-weight: 600;
+    color: #9871F3;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem 
+}
+
+.badge::before{ /*Cria um elemento html*/
+    content: '';
+    display: block;
+    width: 2.0rem;
+    height: 1.8rem;
+    background: url(img/radio.svg);
+}
+
+p{
+    font-size: 0.875rem;
+    line-height: 160%;
+
+    color: #DAE4F2;
+}
+
+.registration h2{
+    margin-bottom: 1.5rem;
+}
+
+form{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.input-wrapper{
+    display: grid;
+    gap: 0.75rem
+}
+
+.input-group{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 3rem;
+    border: 1px solid #21252c;
+    background-color: #13161B;
+    padding: 0 1 rem;
+    border-radius: 10px;
+}
+
+.input-group:focus-within{
+    outline: 2px solid white;
+}
+
+input{
+    background: none;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    color: #e1e1e6;
+    outline: none;
+}
+
+input::placeholder{
+    line-height: 160%;
+    color: #6F7D90;
+}
+
+button{
+    border: 0;
+    background: #2A313C;
+    color: #6F9DE2;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.25rem;
+    border-radius: 10px;
+
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 160%;
+
+    cursor: pointer;
+
+    transition: filter .2s;
+}
+
+button:hover{
+    filter: brightness(1.1);
+}
