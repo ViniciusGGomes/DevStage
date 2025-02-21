@@ -128,7 +128,7 @@ form{
 }
 
 .input-group:focus-within{
-    
+    outline: 2px solid white;
 }
 
 input{
@@ -204,4 +204,5 @@ h4{
     line-height: 100%;
     color: #c8d0c8;
 }
+
 
